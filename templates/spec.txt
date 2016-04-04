@@ -1,0 +1,35 @@
+﻿// TODO: Implement actual Spec
+'use strict';
+
+define([
+<%INJECTIONS%>
+], function (<%MOCKS%>) {
+
+	describe('<%DESCRIBEWHAT%>', function () {
+<%VARS%>
+			beforeEach(module('app'));
+
+<%PROVIDERS%>
+			beforeEach(inject(function ($injector) {
+<%BEINJECTIONS%>
+<%BESPIES%>
+<%SCOPE%>
+<%CREATECOMPILEBE%>
+			}));
+<%CREATECOMPILE%>
+<%HTTPAFTEREACH%>
+			describe('Initialization', function () {
+				it('should initialize correctly', function () {
+<%INITEXPECTS%>
+				});
+			});
+
+			describe('Event Handlers', function () {
+				it('Should handle some event', function () {
+				});
+			});
+
+<%CLEANUP%>
+		}
+	);
+});
